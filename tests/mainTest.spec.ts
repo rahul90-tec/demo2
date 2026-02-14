@@ -21,7 +21,7 @@ test('Login to the application', async({page})=>{
     const cart=new CartPage(page);
     await cart.clickOnCart();
     await cart.checkout();
-    await page.pause();
+    
     await cart.details();
     await expect(page).toHaveURL('https://www.saucedemo.com/checkout-complete.html');
 
